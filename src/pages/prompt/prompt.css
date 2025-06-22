@@ -1,0 +1,7 @@
+.target-url {
+	color: var(--theme-text-muted);
+	padding: var(--space-4) var(--space-16);
+	background: var(--theme-element-background);
+	font-weight: var(--font-weight-light);
+	border-radius: var(--input-radius);
+}

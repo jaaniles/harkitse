@@ -1,0 +1,212 @@
+:root {
+	--space-4: 4px;
+	--space-8: 8px;
+	--space-16: 16px;
+	--space-32: 32px;
+	--space-48: 48px;
+	--space-64: 64px;
+
+	--theme-background: #1c1b22;
+	--theme-element-background: #1c1b22;
+	--theme-card-background: #23222b;
+
+	--theme-text: rgba(255, 255, 255, 0.9);
+	--theme-text-dark: rgba(255, 255, 255, 0.15);
+	--theme-text-muted: rgba(255, 255, 255, 0.7);
+	--theme-text-light: rgba(255, 255, 255, 0.95);
+	--theme-text-placeholder: rgba(255, 255, 255, 0.35);
+	--theme-text-link: #00ddd5;
+	--theme-danger: #ff4d4f;
+	--theme-success: #52c41a;
+	--theme-warning: #faad14;
+	--theme-info: #1890ff;
+
+	--theme-button-background: #484854;
+
+	--font-size-title: 36px;
+	--font-size-body-large: 20px;
+	--font-size-body: 18px;
+	--font-size-subtitle: 14px;
+	--font-size-label: 12px;
+	--font-weight-regular: 400;
+	--font-weight-bold: 700;
+	--font-weight-light: 300;
+
+	--card-radius: 8px;
+	--input-radius: 2px;
+}
+
+body {
+	margin: 0;
+	padding: var(--space-32) 0 0 0;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	font-family: "System UI", sans-serif;
+
+	background: var(--theme-background);
+	font-size: var(--font-size-body);
+	color: var(--theme-text);
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: var(--font-size-title);
+	font-weight: var(--font-weight-bold);
+	color: var(--theme-text);
+}
+
+.stack {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.stack-2 {
+	gap: 2px;
+}
+.stack-4 {
+	gap: var(--space-4);
+}
+.stack-8 {
+	gap: var(--space-8);
+}
+.stack-16 {
+	gap: var(--space-16);
+}
+.stack-32 {
+	gap: var(--space-32);
+}
+
+.stack-horizontal {
+	flex-direction: row;
+	align-items: center;
+}
+
+.align-start {
+	align-items: flex-start;
+}
+
+.card {
+	background: var(--theme-card-background);
+	border-radius: var(--card-radius);
+	padding: var(--space-32) var(--space-64);
+	box-shadow:
+		0 4px 12px rgba(0, 0, 0, 0.08),
+		0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.card-border {
+	border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.button {
+	background: var(--theme-button-background);
+	color: var(--theme-text);
+	border: none;
+	border-radius: var(--input-radius);
+	padding: var(--space-8) var(--space-16);
+	font-size: var(--font-size-subtitle);
+	font-weight: var(--font-weight-bold);
+	cursor: pointer;
+	transition: transform 0.12s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button:hover,
+.button:focus-visible {
+	background: hsl(var(--theme-button-background) hsl(0, 0%, 25%));
+	color: var(--theme-text-dark);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition:
+		transform 0.12s cubic-bezier(0.4, 0, 0.2, 1),
+		background 0.12s cubic-bezier(0.4, 0, 0.2, 1),
+		color 0.12s cubic-bezier(0.4, 0, 0.2, 1);
+	transform: translateY(-2px) scale(1.025);
+	outline: none;
+}
+
+.button:focus {
+	outline: 2px solid var(--theme-info);
+	outline-offset: 2px;
+}
+
+.button:active {
+	background: hsl(var(--theme-button-background) hsl(0, 0%, 15%));
+	color: var(--theme-text-dark);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition:
+		transform 0.12s cubic-bezier(0.4, 0, 0.2, 1),
+		background 0.12s cubic-bezier(0.4, 0, 0.2, 1),
+		color 0.12s cubic-bezier(0.4, 0, 0.2, 1);
+	transform: translateY(-2px) scale(1.025);
+	outline: none;
+}
+
+.button-large {
+	font-size: var(--font-size-body-large);
+}
+
+.button-small {
+	font-size: var(--font-size-subtitle);
+}
+
+.button-danger {
+	background: var(--theme-danger);
+	color: var(--theme-text-light);
+}
+
+.button-success {
+	background: var(--theme-success);
+	color: var(--theme-text-light);
+}
+
+.input {
+	background: var(--theme-element-background);
+	color: var(--theme-text);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: var(--input-radius);
+	padding: var(--space-8) var(--space-16);
+	font-size: var(--font-size-body);
+	width: 100%;
+	box-sizing: border-box;
+
+	::placeholder {
+		color: var(--theme-text-placeholder);
+	}
+}
+
+.link {
+	color: var(--theme-text-link);
+}
+
+.label {
+	font-size: var(--font-size-label);
+	font-weight: var(--font-weight-light);
+	color: var(--theme-text-muted);
+}
+
+.subtitle {
+	font-size: var(--font-size-subtitle);
+	font-weight: var(--font-weight-light);
+	color: var(--theme-text-muted);
+}

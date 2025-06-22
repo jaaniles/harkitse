@@ -1,0 +1,36 @@
+<!-- options.html -->
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Settings</title>
+  
+  <link rel="stylesheet" href="../root.css" />
+  <link rel="stylesheet" href="options.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <main class="card stack stack-32">
+    <h1>HARKITSE.</h1>
+    <div class="stack stack-16 narrow-paragraph">
+      <p class="subtitle">Manage sites you want to visit with more intention.</p>
+      <p class="subtitle">Each time you visit these domains you will be prompted to confirm if you really intended to visit this site.</p>
+    </div>
+    
+    <form id="add-form" class="stack stack-16" autocomplete="off">
+      <div class="stack stack-8 align-start">
+        <label for="domain-input" class="label">New domain</label>
+
+        <div class="stack stack-2 stack-horizontal">
+          <input class="input" type="text" id="domain-input" placeholder="ex. example.com" required />
+          <button type="submit" class="button button-small">Add</button>
+        </div>
+      </div>
+    </form>
+
+    <ul id="domain-list" class="stack stack-8 domain-list"></ul>
+  </main>
+
+  <script src="options.js" type="module"></script>
+</body>
+</html>

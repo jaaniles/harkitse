@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Harkitse. Browse with Intention.</title>
+
+    <link rel="stylesheet" href="../root.css" />
+    <link rel="stylesheet" href="prompt.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <main class="stack stack-16">
+      <div class="card card-border stack stack-32">
+        <h1 id="brand">HARKITSE.</h1>
+
+        <div class="stack stack-16">
+          <p>
+            Are you sure you want to visit?
+          </p>
+
+          <span id="target-url" class="target-url"></span>
+        </div>
+
+        
+        <div class="stack stack-16">
+          <div class="stack stack-32 stack-horizontal">
+            <button id="no" class="button button-large">Exit</button>
+            <button id="yes" class="button button-large">Visit</button>
+          </div>
+        
+          <p id="last-attempt" class="subtitle" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <div class="stack">
+        <button id="open-options" class="button link">Settings</button>
+      </div>
+    </main>
+
+    <script type="module" src="prompt.js"></script>
+  </body>
+</html>

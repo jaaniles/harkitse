@@ -1,0 +1,24 @@
+{
+	"name": "harkitse",
+	"version": "0.0.1",
+	"description": "Get prompted before navigating to a specified domain",
+	"scripts": {
+		"clean": "rimraf dist",
+		"lint": "biome check src",
+		"format": "biome format src --write",
+		"build:ts": "tsc",
+		"build:static": "copyfiles -u 1 \"src/**/*.{html,css}\" dist",
+		"build:manifest": "copyfiles manifest.json dist",
+		"build": "npm run clean && npm run format && npm run lint  && npm run build:ts && npm run build:static && npm run build:manifest"
+	},
+	"author": "jaaniles",
+	"license": "MIT",
+	"devDependencies": {
+		"@biomejs/biome": "^2.0.4",
+		"@types/chrome": "^0.0.326",
+		"copyfiles": "^2.4.1",
+		"rimraf": "^6.0.1",
+		"typescript": "^5.8.3",
+		"web-ext-types": "^3.2.1"
+	}
+}

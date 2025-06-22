@@ -1,0 +1,26 @@
+{
+	"manifest_version": 2,
+	"name": "HARKITSE",
+	"version": "0.1",
+	"description": "Get prompted before navigating to a specified domain",
+	"permissions": [
+		"webRequest",
+		"webRequestBlocking",
+		"<all_urls>",
+		"tabs",
+		"storage"
+	],
+	"background": {
+		"scripts": ["background/index.js"]
+	},
+	"web_accessible_resources": ["pages/prompt/prompt.html"],
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["content/cleanup.js"],
+			"run_at": "document_start"
+		}
+	],
+	"options_page": "pages/options/options.html",
+	"content_security_policy": "script-src 'self'; object-src 'self'"
+}

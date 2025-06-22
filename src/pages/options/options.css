@@ -1,0 +1,26 @@
+.domain-list {
+	width: 100%;
+	padding: 0;
+
+	display: flex;
+	flex-direction: column;
+
+	list-style: none;
+}
+
+.domain-item {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+
+	padding: var(--space-16) var(--space-32);
+}
+
+.domain-label {
+	font-weight: var(--font-weight-bold);
+	color: var(--theme-text);
+}
+
+.narrow-paragraph {
+	max-width: 30ch;
+}
